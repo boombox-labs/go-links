@@ -71,19 +71,6 @@ pip install -r src/requirements.txt
 
 You can use `pyenv` as well.
 
-### Add an app.yml file
-
-Add a file at `server/src/config/app.yml` with this format:
-
-```yaml
-sessions_secret: any_secret
-postgres:
-  url: "postgresql://username:password@host/database"
-```
-
-`postgres.url` should be the connection string for a Postgres 12 database. The server
-startup script will add the tables Trotto needs.
-
 ### Start the backend server
 
 From the `server/` directory, run:

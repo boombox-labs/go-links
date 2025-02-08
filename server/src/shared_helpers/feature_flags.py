@@ -57,9 +57,9 @@ class Provider:
     """
     if not self.launchdarkly_initialized:
       return self.default_feature_flags.get(feature_flag_key, False)
-    
+
     context = self._get_context_builder(user).build()
     return ldclient.get().variation(feature_flag_key, context, False)
-      
+
 
 provider = Provider(config.get_config())
